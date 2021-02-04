@@ -1,0 +1,134 @@
+ /* Main Nav Styling */
+ .main-nav {
+    list-style-type: none;
+    height: 20%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(198, 198, 198);
+    position: sticky;
+    top: 0;
+  }
+  
+ .navElement {
+    float: left;
+    margin-left: 5%;
+    margin-right: 2.5%;
+  }
+  
+.navElement a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 20pt;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Julius Sans One', sans-serif;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+.navElement a:hover {
+    /* background-color: #111; */
+    border-bottom: #111;
+    border-bottom-style: ridge;
+  }
+
+/* Creates our parallax effect which is the unique scrolling */
+.parallax {
+    /* The image used */
+    background-image: url("./reference/reference/cello-glue.JPG");
+  
+    /* Set a specific height */
+    min-height: 800px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+    /* Various class and item styles */
+.jumbo1 {
+    height: auto;
+    width: 100%;
+  }
+.large-title{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 160pt;
+    text-align: center;
+  }
+.small-title{
+      font-size: 130pt;
+      font-family: 'Tangerine', cursive;
+      text-align: center;
+  }
+.statement{
+    font-family: 'Julius Sans One', sans-serif;
+    /* margin-right: 15%; */
+    font-size: 20pt;
+    line-height: 35px;
+    /* margin-top: 40px; */
+    margin-bottom: 0px;
+    /* margin-left: 5%; */
+    background-color: lightgray;
+    padding: 20px;
+}
+.main-content{
+    background-color: lightgray;
+
+}
+.front-image{
+    width: 30%;
+    height: auto;
+    border-style: solid;
+    border-width: 5px;
+    border-color: lightgray;
+    border-radius: 31x;
+    display: inline-block;
+}
+#firstFrontImage{
+    float: left;
+    width: 33%;
+    /* margin-bottom: 25px; */
+}
+#secondFrontImage{
+    float: left;
+    width: 33%;
+}
+#thirdFrontImage{
+    float: left;
+    width: 33%;
+}
+#backgroundimg{
+    overflow: auto;
+    width: auto;
+    height: auto;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-bottom: 0px;
+    padding-right: 10%;
+    background-image: url("../reference/reference/rotatedcropped-shavings.jpeg");
+}
+#section1{
+    height: auto;
+    margin: 0px;
+    overflow: auto;
+}
+#section2{
+    height: auto;
+    overflow: auto;
+    margin: 5px;
+}
+.additionaltext{
+    font-size: 20pt;
+    font-family: 'Julius Sans One', sans-serif;
+}
+#instaLogo{
+    float: bottom;
+    margin: 80px;
+    height: 60px;
+}
+#divhref{
+    margin-top: 10%;
+}
