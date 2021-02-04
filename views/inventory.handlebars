@@ -14,8 +14,9 @@
         <li class="navElement"><a href="contact.html">Contact</a></li>
     </ul>
     <ul class="vertical-nav">
-        <li class="vertical-navElement"><a href="default.asp">Violins</a></li>
-        <li class="vertical-navElement"><a href="news.asp">Cellos</a></li>
+        {{!-- these should make calls to the api and repopulate the page with the corresponding instrument --}}
+        <li class="vertical-navElement"><a href="">Violins</a></li>
+        <li class="vertical-navElement"><a href="">Cellos</a></li>
 
         <!-- So these two nav elements with violins and Cellos will make api calls that will repopulate on the page accordingly -->
 
@@ -25,5 +26,8 @@
     </div>
     <div class="card hold">
         {{!-- Instrument cards go in here --}}
+        {{#each instrument}}
+            {{instrument/inventorycard}}
+        {{/each}}
     </div>
 <!-- <div style="height:1000px;font-size:36px"></div> -->
