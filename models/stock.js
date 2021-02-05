@@ -4,7 +4,7 @@
 //lets write this bad boy in es6 
 module.exports = (sequelize, DataTypes) => {
     //Defining Product
-    const product = sequelize.define("Product", {
+    const Product = sequelize.define("Product", {
         //Here were creating the columns
         name: {
             type: DataTypes.STRING,
@@ -41,5 +41,5 @@ module.exports = (sequelize, DataTypes) => {
         // }
 
     });
-    return product;
+    return Product;
 };
