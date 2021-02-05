@@ -19,3 +19,34 @@
     float: left;
     margin: 50px;
 }
+.product-close{
+  display: inline-flex;
+}
+.instTitleProduct{
+  margin-bottom: 5%;
+  font-size: 35pt;
+}
+.instDescProduct{
+  display: block;
+  width: auto;
+  height: auto;
+}
+.product-display{
+  height: 800px;
+}
+.imgMargin{
+  margin-left: 20%;
+  margin-top: 10%;
+  margin-right: 0;
+  border: #56565661;
+  border-style: solid;
+  border-width: 35px;
+}
+.descMargin{
+  font-family: 'Julius Sans One', sans-serif;
+  float: right;
+  width: 35%;
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 1px;
+}
