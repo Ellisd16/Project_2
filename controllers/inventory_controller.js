@@ -15,6 +15,7 @@ exports.index = (req, res) => {
             layout: "main",
             product: dbProduct
         });
+        console.log(dbProduct)
     });
 
 }

@@ -26,8 +26,18 @@
     </div>
     <div class="card hold">
         {{!-- Instrument cards go in here --}}
-        {{#each instrument}}
+        {{!-- {{#each instrument}}
             {{instrument/inventorycard}}
-        {{/each}}
+        {{/each}} --}}
+        {{#if Product}}
+        {{#each Product}}
+        <div class="instrumentCard" href=" + {{this.id}}">
+            <div class="instrumentImage">
+                <img style="height: auto; width: 300px;" src="{{this.im}}">
+            </div>
+            <div class="instrumentName" style="text-align: center; font-size: 20pt;">
+                <p>{{instrmentnameHB}}</p>
+            </div>
+         </div>
     </div>
 <!-- <div style="height:1000px;font-size:36px"></div> -->
