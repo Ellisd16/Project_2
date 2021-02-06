@@ -23,8 +23,8 @@
     <div class="card hold">
         {{!-- Instrument cards go in here --}}
 
-        {{#if Product}}
-        {{#each Product}}
+        {{#if product}}
+        {{#each product}}
         <div class="instrumentCard" href=" {{this.dataValues.id}}">
             <a href="/product/{{this.dataValues.id}}/">
             <div class="instrumentImage">
