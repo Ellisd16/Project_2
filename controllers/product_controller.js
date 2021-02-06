@@ -3,14 +3,14 @@ const db = require("../models");
 
 //reads :id from inventory
 
-exports.id = (req, res) => {
+exports.index = (req, res) => {
     db.Product.findOne({
         where: {
             id: req.params.id
         },
 
     }).then(function (dbProduct) {
-        res.render("product", {
+        res.render("product/product", {
             layout: "main",
             product: dbProduct
         });

@@ -11,7 +11,7 @@ exports.index = (req, res) => {
             ProductId: req.product.id
         }
     }).then(function (dbProduct) {
-        res.render("inventory", {
+        res.render("inventory/inventory", {
             layout: "main",
             product: dbProduct
         });

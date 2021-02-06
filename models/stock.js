@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     //Defining Product
     const Product = sequelize.define("Product", {
         //Here were creating the columns
-        name: {
+        instName: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
 
         },
-        description: {
+        descr: {
             type: DataTypes.STRING,
             allowNull: true,
         },

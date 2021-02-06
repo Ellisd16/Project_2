@@ -1,1 +1,1 @@
-CREATE DATABASE developmentTest_db;
+CREATE DATABASE developmenttest_db;
