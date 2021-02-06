@@ -34,11 +34,11 @@ module.exports = (sequelize, DataTypes) => {
   Admin.prototype.validPassword = function (password) {
     return bcrypt.compareSync(password, this.password);
   }
-  Admin.associate = models => {
-    // associations can be defined here
-    Admin.hasMany(models.Trip, {
-      onDelete: "cascade"
-    });
-  }
+  // Admin.associate = models => {
+  //   // associations can be defined here
+  //   Admin.hasMany(models.Trip, {
+  //     onDelete: "cascade"
+  //   });
+  // }
   return Admin;
 };
