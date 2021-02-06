@@ -1,24 +1,26 @@
 var nameInput = $("#tripName"),
-		destinationInput = $("#autocomplete"),
-		methodOfTransportInput = $("#methodOfTransport"),
-		arrivalDateInput = $("#datepicker");
+	destinationInput = $("#autocomplete"),
+	methodOfTransportInput = $("#methodOfTransport"),
+	arrivalDateInput = $("#datepicker");
 
 var url = window.location.search;
-var tripId;
-var userId;
+var productId;
+var adminId;
 // Sets a flag for whether or not we're updating a post to be false initially
 var updating = false;
 
-function submitTrip(trip) {
-  $.post("/trips/new", trip, function() {
-    window.location.href = "/trips";
+
+
+function submitProduct(product) {
+  $.post("/product/add", product, function() {
+    window.location.href = "/inventory";
   });
 }
 
-function updateTrip(trip) {
+function updateProduct(product) {
     $.ajax({
       method: "PUT",
-      url: "/trips",
+      url: "/product/change",
       data: trip
     })
     .done(function() {
@@ -28,22 +30,23 @@ function updateTrip(trip) {
 
 function handleFormSubmit(event) {
 	event.preventDefault();
-	// Wont submit the post if we are missing a body, title, or author
-	if (!destinationInput.val().trim() || !methodOfTransportInput.val().trim() || !arrivalDateInput.val()) {
+	// Wont submit the post if we are missing a name
+	if (!nameInput.val().trim()) {
 	  return;
 	}
 	// Constructing a newPost object to hand to the database
-	var newTrip = {
+	var newProduct = {
 	  name: nameInput
 	    .val()
 	    .trim(),
-	  destination: destinationInput
+	  description: descriptionInput
 	    .val()
 	    .trim(),
-	  methodOfTransport: methodOfTransportInput
+        // I need to find a way to add the image url in as a string after it is generated
+	  img: imageURLInput
 	  	.val()
 	  	.trim(),
-	  arrivalDate: arrivalDateInput
+	  audio: audioInput
 	  	.val()
 	  	.trim()
 	};
@@ -51,12 +54,12 @@ function handleFormSubmit(event) {
 	// If we're updating a post run updatePost to update a post
 	// Otherwise run submitPost to create a whole new post
 	if (updating) {
-	  newTrip.id = tripId;
-	  updateTrip(newTrip);
+	  newProduct.id = productId;
+	  updateTrip(newProduct);
 	}
 	else {
 	  submitTrip(newTrip);
 	}
 }
 
-$("#tripForm").on("submit", handleFormSubmit);
+$("#productForm").on("submit", handleFormSubmit);

@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
 
         },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         //For img/ audio, I'm allowing null just because I'm not too sure how to incorporate the href yet. 
         //I'm assuming its gonna be a string, but you know what they say about assuming...
         img: {
@@ -30,10 +34,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: true,
         },
-        availability: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-        },
+        // availability: {
+        //     type: DataTypes.BOOLEAN,
+        //     allowNull: false,
+        // },
         // price: {
         //     type: DataTypes.INTEGER,
         //     allowNull: false,

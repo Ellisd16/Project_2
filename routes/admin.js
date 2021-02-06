@@ -1,11 +1,16 @@
-// const express = require('express');
-// const router  = express.Router();
+var express = require('express');
+var router  = express.Router();
 
-// const adminPage_controller = require('../controllers/adminPage_controller');
+var passport = require("../config/passport");
+var admin_controller = require('../controllers/admin_controller');
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-// router.get('/admin', adminPage_controller.index);
+router.get('/signup', admin_controller.registrationPage);
 
-// module.exports = router;
+router.get('/sign-out', admin_controller.signOutAdmin);
 
+router.post('/login', passport.authenticate("local"), admin_controller.loginAdmin);
 
-// This page needs something closer to the user page
+router.post('/signup', admin_controller.signUpAdmin);
+
+module.exports = router;

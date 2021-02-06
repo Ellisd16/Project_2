@@ -2,8 +2,8 @@ const db = require('../models');
 
 //this is the users_controller.js file
 exports.registrationPage = (req,res) => {
-  res.render('users/registration', {
-    layout: 'main-registration'
+  res.render('/admin/registration', {
+    layout: 'main'
   });
 };
 
@@ -21,18 +21,18 @@ exports.loginUser = (req, res) => {
 };
 
 // register a user
-exports.signUpUser = (req,res) => {
+exports.signUpAdmin = (req,res) => {
 
-  db.User.findAll({
+  db.Admin.findAll({
     where: {username: req.body.username}
   }).then(users => {
     if (users.length > 0) {
       res.json({
-        duplicateUser: true
+        duplicateAdmin: true
       });
     //At some point, make sure that only one user can be associated with an email.
     } else {
-      db.User.create({
+      db.Admin.create({
         username: req.body.username,
         email: req.body.email,
         password: req.body.password
