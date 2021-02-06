@@ -1,0 +1,42 @@
+    <link  href="/assets/css/inventory.css" rel="stylesheet" type="text/css" media="screen"/>
+  
+    <div id="border">
+        <div class="parallaxOther">
+            <img src="reference/CPLogo.png" id="cplogo">
+    </div>
+    </div>
+    <div class="nav-bar-hold">
+
+    {{> nav}}
+
+    <ul class="vertical-nav">
+        {{!-- these should make calls to the api and repopulate the page with the corresponding instrument --}}
+        <li class="vertical-navElement"><a href="">Violins</a></li>
+        <li class="vertical-navElement"><a href="">Cellos</a></li>
+
+        <!-- So these two nav elements with violins and Cellos will make api calls that will repopulate on the page accordingly -->
+
+        <!-- <li class="vertical-navElement"><a href="contact.asp">Contact</a></li>
+        <li class="vertical-navElement"><a href="about.asp">About</a></li> -->
+      </ul>
+    </div>
+    <div class="card hold">
+        {{!-- Instrument cards go in here --}}
+
+        {{#if Product}}
+        {{#each Product}}
+        <div class="instrumentCard" href=" {{this.dataValues.id}}">
+            <a href="/product/{{this.dataValues.id}}/">
+            <div class="instrumentImage">
+                <img style="height: auto; width: 300px;" src="{{this.dataValues.img}}">
+            </div>
+            <div class="instrumentName" style="text-align: center; font-size: 20pt;">
+                <p>{{this.dataValues.name}}</p>
+            </div>
+            </a>
+         </div>
+         {{/each}}
+         {{/if}}
+
+    </div>
+<!-- <div style="height:1000px;font-size:36px"></div> -->

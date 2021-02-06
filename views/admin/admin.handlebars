@@ -1,0 +1,22 @@
+    <link  href="/assets/css/admin.css" rel="stylesheet" type="text/css" media="screen"/>
+
+ 
+    <div>
+{{> nav}}
+    </div>
+    <div>
+{{!-- database cards go here --}}
+        {{#if item}}
+        {{#each item}}
+<ul>
+    <li class="dbCard"> 
+        <p class="infofill">{{ this.dataValues.name }}</p>
+        <p class ="infofill">{{ this.datavalues.img }}</p>
+        <p class ="infofill">{{ this.datavalues.audio }}</p>
+        <p class ="infofill">{{ this.datavalues.availability }}</p>
+        <div class="UD-op"> <button><img  class="editBtnImg" src="reference/iu.png"></button> <button><img class="deleteBtnImg" src="reference/iu-2.png"></button></div> 
+    </li>
+        {{/each}}
+        {{/if}}
+    </div>
+</ul>

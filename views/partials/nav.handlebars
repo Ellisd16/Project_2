@@ -1,0 +1,20 @@
+    <ul class="main-nav">
+        {{!-- These nav elements need to be replaced with the proper routes --}}
+        <li class="navElement"><a href="/index/">Home</a></li>
+        <li class="navElement"><a href="/gallery/">Gallery</a></li>
+        <li class="navElement"><a href="/inventory/">Inventory</a></li>
+        <li class="navElement"><a href="/contact/">Contact</a></li>
+
+                    {{#if isAuthenticated}}
+                    <li>
+                        <a class="modify" href="/admin/">Modify Inventory</a>
+                    </li>
+                    <li>
+                        <a href="/admin/sign-out" class="page-scroll" data-toggle="modal">Logout</a>
+                    </li>
+                {{else}}
+                    <li>
+
+                    </li>
+                {{/if}}
+      </ul>
