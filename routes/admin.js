@@ -5,7 +5,7 @@ var passport = require("../config/passport");
 var admin_controller = require('../controllers/admin_controller');
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-router.get('/signup', admin_controller.registrationPage);
+// router.get('/signup', admin_controller.registrationPage);
 
 router.get('/sign-out', admin_controller.signOutAdmin);
 

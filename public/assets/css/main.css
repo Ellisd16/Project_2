@@ -132,3 +132,11 @@
 #divhref{
     margin-top: 10%;
 }
+.adminlogin{
+    text-align: center;
+}
+
+.adhref{
+    text-decoration: none;
+color: black;
+}
