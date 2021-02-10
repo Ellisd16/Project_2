@@ -4,7 +4,7 @@ const Sequelize = require("sequelize")
 
 const models = require('./models')
 
-const user = models.Admin.destory({
+const user = models.Admin.destroy({
   where: {
     username: 'ethan123',
     email: 'this@gmail.com',
