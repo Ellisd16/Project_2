@@ -2,6 +2,7 @@
     "name": "project_2",
     "version": "1.0.0",
     "description": "",
+    "homepage": "https://stormy-sea-04645.herokuapp.com",
     "main": "server.js",
     "scripts": {
         "start": "node ./bin/www",
