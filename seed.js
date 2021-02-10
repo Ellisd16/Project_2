@@ -16,7 +16,8 @@ const user2 = models.Admin.create({
     email: 'theonlyethannewell@gmail.com',
     password: '142Ttjyy89465FHER',
 }});
-user2();
+
   // let's assume the default of isAdmin is false
   console.log(user.username); // 'alice123'
-  console.log(user.isAdmin); // false
+ // false
+  console.log(user2.username);
