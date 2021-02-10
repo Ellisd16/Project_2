@@ -1,10 +1,18 @@
 const db = require('../models');
 
 //this is the users_controller.js file
-exports.registrationPage = (req,res) => {
-  res.render('/admin/registration', {
-    layout: 'main'
-  });
+exports.dbPage = (req,res) => {
+  db.Product.findAll().then(function (dbProduct) {
+    console.log("we got to the render function.")
+    res.render('admin/admin', {
+        layout: 'main',
+        item: dbProduct
+    });
+    console.log(dbProduct)
+});
+  // res.render('admin/admin', {
+  //   layout: 'main'
+  // });
 };
 
 exports.signOutAdmin = (req,res) => {

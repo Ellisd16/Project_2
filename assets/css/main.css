@@ -36,7 +36,7 @@
 /* Creates our parallax effect which is the unique scrolling */
 .parallax {
     /* The image used */
-    background-image: url("");
+    background-image: url("https://i.imgur.com/LTChy2V.jpg");
   
     /* Set a specific height */
     min-height: 800px; 
@@ -108,7 +108,7 @@
     padding-left: 10%;
     padding-bottom: 0px;
     padding-right: 10%;
-    background-image: url("../reference/reference/rotatedcropped-shavings.jpeg");
+    background-image: url("https://i.imgur.com/ehwkBvb.jpg");
 }
 #section1{
     height: auto;
@@ -131,4 +131,12 @@
 }
 #divhref{
     margin-top: 10%;
+}
+.adminlogin{
+    text-align: center;
+}
+
+.adhref{
+    text-decoration: none;
+color: black;
 }

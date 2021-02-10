@@ -9,9 +9,9 @@ module.exports = (sequelize, DataTypes) => {
         instName: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [1]
-            }
+            // validate: {
+            //     len: [1]
+            // }
         },
         id: {
             type: DataTypes.INTEGER,
