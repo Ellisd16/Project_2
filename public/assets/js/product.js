@@ -1,7 +1,7 @@
-var nameInput = $("#tripName"),
-	destinationInput = $("#autocomplete"),
-	methodOfTransportInput = $("#methodOfTransport"),
-	arrivalDateInput = $("#datepicker");
+const nameInput = $("#productName");
+const	descInput = $("#productDesc");
+const	imgHrefInput = $("#imgHref");
+const	audioHrefInput = $("#audioHref");
 
 var url = window.location.search;
 var productId;
@@ -12,53 +12,57 @@ var updating = false;
 
 
 function submitProduct(product) {
-  $.post("/product/add", product, function() {
-    window.location.href = "/inventory";
+	console.log(product);
+	console.log("Made it into the submit product function in product.js")
+  $.post("/admin/add", product, function() {
+    window.location.href = "/admin";
   });
 }
 
 function updateProduct(product) {
     $.ajax({
       method: "PUT",
-      url: "/product/change",
-      data: trip
+      url: "/admin",
+      data: product
     })
     .done(function() {
-      window.location.href = "/trips";
+      window.location.href = "/admin";
     });
   }
 
 function handleFormSubmit(event) {
+
 	event.preventDefault();
+	console.log("Handle form submit called")
 	// Wont submit the post if we are missing a name
 	if (!nameInput.val().trim()) {
 	  return;
 	}
 	// Constructing a newPost object to hand to the database
 	var newProduct = {
-	  name: nameInput
+	  instName: nameInput
 	    .val()
 	    .trim(),
-	  description: descriptionInput
+	  descr: descInput
 	    .val()
 	    .trim(),
         // I need to find a way to add the image url in as a string after it is generated
-	  img: imageURLInput
+	  img: imgHrefInput
 	  	.val()
 	  	.trim(),
-	  audio: audioInput
+	  audio: audioHrefInput
 	  	.val()
 	  	.trim()
 	};
-
+	console.log(newProduct);
 	// If we're updating a post run updatePost to update a post
 	// Otherwise run submitPost to create a whole new post
 	if (updating) {
 	  newProduct.id = productId;
-	  updateTrip(newProduct);
+	  updateProduct(newProduct);
 	}
 	else {
-	  submitTrip(newTrip);
+	  submitProduct(newProduct);
 	}
 }
 

@@ -20,5 +20,13 @@ exports.index = (req, res) => {
         });
         console.log(dbProduct)
     });
-
 };
+exports.createProduct = (req, res) => {
+    // Add id from User onto req.body
+    // req.body.UserId = req.user.id;
+    console.log("We got into the create product function in inv_controller")
+    console.log(req.body);
+    db.Product.create(req.body).then(dbPost => res.json(dbPost));
+  };
+  
+  

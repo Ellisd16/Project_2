@@ -3,20 +3,43 @@
  
     <div>
 {{> nav}}
+</div>
+    <div id="submit-form">
+        <form id="productForm">
+            <div id="map-places-container">
+                <div class="form-group">
+                        <input id="productName" name="productN" type="text" placeholder="Product Name"></input>
+                    </div>
+                <div class="form-group">
+                        <input id="productDesc" name="productD" type="text" placeholder="Product Description"></input>
+                    </div>
+                    <div class="form-group">
+                        <input id="imgHref" name="imgH" type="text" placeholder="Image Direct Link"></input>
+                    </div>
+                    <div class="form-group">
+                        <input id="audioHref" name="audioH" type="text" placeholder="Audio Link"></input>
+                    </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
     </div>
-    <div>
+<div>
+
 {{!-- database cards go here --}}
         {{#if item}}
         {{#each item}}
 <ul>
     <li class="dbCard"> 
-        <p class="infofill">{{ this.dataValues.name }}</p>
+        <p class="infofill">{{ this.dataValues.instName }}</p>
+        <p class ="infofill">{{ this.datavalues.descr }}</p>
         <p class ="infofill">{{ this.datavalues.img }}</p>
         <p class ="infofill">{{ this.datavalues.audio }}</p>
-        <p class ="infofill">{{ this.datavalues.availability }}</p>
-        <div class="UD-op"> <button><img  class="editBtnImg" src="reference/iu.png"></button> <button><img class="deleteBtnImg" src="reference/iu-2.png"></button></div> 
+        <div class="UD-op"> <button><img  class="editBtnImg" src="https://i.imgur.com/gvozLec.png"></button> <button><img class="deleteBtnImg" src="https://i.imgur.com/WOm4EyA.png"></button></div> 
     </li>
         {{/each}}
         {{/if}}
     </div>
 </ul>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/product.js"></script>
