@@ -3,7 +3,7 @@
    
     <div id="border">
         <div class="parallaxOther">
-            <img src="reference/CPLogo.png" id="cplogo">
+            <img src="https://i.imgur.com/oNLmcoE.png" id="cplogo">
     </div>
     </div>
 
@@ -12,6 +12,7 @@
 <div style="height:1000px;">
     <div class="product-close">
         {{#if product}}
+        {{#each product}}
     <div class="imgMargin">
         <img class="product-display" src="{{this.dataValues.img}}">
     </div>
@@ -23,6 +24,7 @@
             {{this.dataValues.descr}}
         </div>
     </div>
+    {{/each}}
     {{/if}}
     </div>
 </div>
