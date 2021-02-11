@@ -27,7 +27,7 @@
         {{#if product}}
         {{#each product}}
         <div class="instrumentCard" href=" {{this.dataValues.id}}">
-            <a href="/product/{{this.dataValues.id}}/">
+            <a class="productHref" href="/product/{{this.dataValues.id}}/">
             <div class="instrumentImage">
                 <img style="height: auto; width: 300px;" src="{{this.dataValues.img}}">
             </div>

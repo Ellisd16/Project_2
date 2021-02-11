@@ -11,7 +11,7 @@ module.exports = app => {
 
     app.use('/', home);
     app.use('/inventory', inventory);
-    app.use('/product/:id', product);
+    app.use('/product', product);
     app.use('/gallery', gallery);
     app.use('/admin', admin);
     app.use('/users', users);

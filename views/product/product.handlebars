@@ -3,7 +3,7 @@
    
     <div id="border">
         <div class="parallaxOther">
-            <img src="reference/CPLogo.png" id="cplogo">
+            <img src="https://i.imgur.com/oNLmcoE.png" id="cplogo">
     </div>
     </div>
 
@@ -12,14 +12,14 @@
 <div style="height:1000px;">
     <div class="product-close">
     <div class="imgMargin">
-        <img class="product-display" src=" Product image ">
+        <img class="product-display" src="{{product.dataValues.img}}">
     </div>
     <div class="descMargin">
         <div class="instTitleProduct">
-            {{!-- This needs to be the product name --}}
+            {{product.dataValues.instName}}
         </div>
         <div class="instDescProduct">
-            {{!-- This needs to be the product description --}}
+            {{product.dataValues.descr}}
         </div>
     </div>
     </div>
