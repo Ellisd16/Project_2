@@ -11,20 +11,16 @@
 
 <div style="height:1000px;">
     <div class="product-close">
-        {{#if product}}
-        {{#each product}}
     <div class="imgMargin">
-        <img class="product-display" src="{{this.dataValues.img}}">
+        <img class="product-display" src="{{product.dataValues.img}}">
     </div>
     <div class="descMargin">
         <div class="instTitleProduct">
-            {{this.dataValues.instName}}
+            {{product.dataValues.instName}}
         </div>
         <div class="instDescProduct">
-            {{this.dataValues.descr}}
+            {{product.dataValues.descr}}
         </div>
     </div>
-    {{/each}}
-    {{/if}}
     </div>
 </div>
