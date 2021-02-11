@@ -4,7 +4,7 @@ const db = require("../models");
 //reads :id from inventory
 
 exports.index = (req, res) => {
-    db.stock.findOne({
+    db.Product.findOne({
         where: {
             id: req.params.id
         },
