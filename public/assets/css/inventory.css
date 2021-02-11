@@ -54,6 +54,7 @@
     border-style: solid;
     float: right;
     margin: 5%;
+    background-color: rgba(128, 128, 128, 0.67);
     /* align-items: center; */
     /* padding-left: 12.5%;
     padding-right: 12.5%; */
@@ -66,4 +67,6 @@
 .instrumentName{
     text-align: center;
     font-size: 20pt;
+    text-decoration: none;
+    color: black;
 }
