@@ -11,6 +11,7 @@
 
 <div style="height:1000px;">
     <div class="product-close">
+        {{#if product}}
     <div class="imgMargin">
         <img class="product-display" src="{{this.dataValues.img}}">
     </div>
@@ -22,5 +23,6 @@
             {{this.dataValues.descr}}
         </div>
     </div>
+    {{/if}}
     </div>
 </div>

@@ -10,6 +10,7 @@ exports.index = (req, res) => {
         },
 
     }).then(function (dbProduct) {
+        console.log(dbProduct)
         res.render("product/product", {
             layout: "main",
             product: dbProduct
