@@ -27,6 +27,28 @@ exports.createProduct = (req, res) => {
     console.log("We got into the create product function in inv_controller")
     console.log(req.body);
     db.Product.create(req.body).then(dbPost => res.json(dbPost));
-  };
-  
-  
+};
+//Update a product
+exports.updateProduct = (req, res) => {
+    db.Product.update(
+        req.body,
+        {
+            where:
+                { id: req.body.id }
+        }).then((dbProduct) => {
+            res.json(dbProduct);
+            console.log("Product has been updated")
+        })
+};
+//Delete a product
+exports.deleteProduct = (req, res) => {
+    db.Product.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then((dbProduct) => {
+        res.json(dbProduct);
+        console.log("Product has been deleted!")
+    })
+}
+
