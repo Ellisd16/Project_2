@@ -23,11 +23,11 @@
         </form>
     </div>
 <div>
-
+<ul>
 {{!-- database cards go here --}}
         {{#if item}}
         {{#each item}}
-<ul>
+
     <li class="dbCard"> 
         <p class="infofill">{{ this.dataValues.instName }}</p>
         <p class ="infofill">{{ this.datavalues.descr }}</p>
@@ -37,9 +37,9 @@
     </li>
         {{/each}}
         {{/if}}
-    </div>
-</ul>
 
+</ul>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="/assets/js/product.js"></script>
