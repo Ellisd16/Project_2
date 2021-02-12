@@ -15,8 +15,8 @@ router.post('/login', passport.authenticate("local"), admin_controller.loginAdmi
 router.post('/add', inventory_controller.createProduct);
 
 //added an update and delete route 
-router.post('/update', inventory_controller.updateProduct);
+router.post('/update/:id', inventory_controller.updateProduct);
 
-router.post('/delete', inventory_controller.deleteProduct);
+router.post('/delete/:id', inventory_controller.deleteProduct);
 
 module.exports = router;

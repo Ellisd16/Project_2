@@ -19,7 +19,11 @@
                     <div class="form-group">
                         <input id="audioHref" name="audioH" type="text" placeholder="Audio Link"></input>
                     </div>
+                    <div class="form-group">
+                        <input id="idinput" name="idinp" type="text" placeholder="ONLY USE IF UPDATING!!!"></input>
+                    </div>
             <button type="submit" class="btn btn-default">Submit</button>
+            <button type="edit" class="btn btn-default">Edit</button>
         </form>
     </div>
 <div>
@@ -30,10 +34,11 @@
 
     <li class="dbCard"> 
         <p class="infofill">{{ this.dataValues.instName }}</p>
-        <p class ="infofill">{{ this.datavalues.descr }}</p>
-        <p class ="infofill">{{ this.datavalues.img }}</p>
-        <p class ="infofill">{{ this.datavalues.audio }}</p>
-        <div class="UD-op"> <button><img  class="editBtnImg" src="https://i.imgur.com/gvozLec.png"></button> <button><img class="deleteBtnImg" src="https://i.imgur.com/WOm4EyA.png"></button></div> 
+        <p class ="infofill">{{ this.dataValues.descr }}</p>
+        <p class ="infofill">{{ this.dataValues.img }}</p>
+        <p class ="infofill">{{ this.dataValues.audio }}</p>
+        <p class ="infofill">{{ this.dataValues.id }}</p>
+        <div class="UD-op"> <a href="/admin/delete/{{this.dataValues.id}}"><img class="deleteBtnImg" src="https://i.imgur.com/WOm4EyA.png"></a></div> 
     </li>
         {{/each}}
         {{/if}}
