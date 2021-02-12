@@ -34,7 +34,7 @@ exports.updateProduct = (req, res) => {
         req.body,
         {
             where:
-                { id: req.body.id }
+                { id: req.params.id }
         }).then((dbProduct) => {
             res.json(dbProduct);
             console.log("Product has been updated")
